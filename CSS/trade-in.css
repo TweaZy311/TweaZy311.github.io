@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: sans-serif;
+  background: rgb(250, 250, 250);
+  color: black;
+}
+nav,
+.content-container,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* ========== Menu ==========*/
+.content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 0px 30px;
+}
+.navbar{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    padding: 1em;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo{
+    width: 50px;
+    transition: 0.3s;
+}
+#logo:hover{
+    transform: scale(1.2);
+} 
+.navbar .menu-list{
+    display: inline-flex;
+}
+.menu-list li{
+    list-style: none;
+}
+.menu-list li a{
+    color: rgb(18, 21, 42);
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+    color: #007bff;
+}
+.icon{
+    color: rgb(18, 21, 42);
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.icon.cancel-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+.navbar.sticky .icon.cancel-btn{
+    top: 10px;
+}
+/* ========== Hero Section ==========*/
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    cursor: pointer;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 110px;
+    color: rgb(18, 21, 42);
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+.block{
+    overflow: hidden;
+    font-size: 16px;
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
+}
+.block:nth-child(3){
+    margin-bottom: 50px;
+}
+.block h1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+}
+.block .title{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 38px;
+    line-height: 44px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.advantage{
+    margin-bottom: 10px;
+    padding: 20px 0;
+    padding-left: 55px;
+    background: rgb(220, 220, 220);
+    border-radius: 10px;
+}
+.block input{
+    display: block;
+    margin: 25px auto 0 auto;
+    width: 400px;
+    padding: 17px 20px;
+    background: #e5e5e5;
+    outline: none;
+    border: none;
+    font-size: 110%;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.block .submit-btn{
+    display: block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 400px;
+    margin: 40px auto 30px auto;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-size: 110%;
+    font-weight: 600;
+    background: rgb(18, 21, 42);
+    color: white;
+    box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.block .result{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 600;
+    width: 400px;
+    padding: 10px 15px;
+    display: none;
+}
+.block .result.active{
+    display: block;
+}
+/* ========== Footer ==========*/
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    background: rgb(18, 21, 42);
+    padding: 3em 5em 1em ;
+    color: white;
+}
+footer .container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 2em;
+}
+footer .aboutus a{
+    color: rgb(136, 138, 148);
+    transition: 0.5s;
+}
+footer .aboutus a:hover{
+    color:#2360d1;
+}
+footer .container h2{
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+footer .container .socials{
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 52px);
+    grid-gap: 10px;
+}
+footer .container .socials li{
+    list-style: none;
+}
+footer .container .socials li a{
+    color: white;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: rgb(136, 138, 148);
+    border-radius: 5px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+footer .container .socials li a:hover{
+    background:#2360d1;
+}
+footer li{
+    list-style: none;
+    margin-bottom: 0.7em;
+}
+footer li a{
+    color: rgb(136, 138, 148);
+    display: inline-block;
+    transition: 0.5s;
+}
+footer li a:hover{
+    color: #2360d1;
+}
+.info li{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    list-style: none;
+}
+@media (max-width: 1024px){
+    footer{
+        padding: 40px;
+    }
+    footer .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .block .title{
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .advantage{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .block input,
+    .block .submit-btn,
+    .block .result{
+        width: 400px;
+    }
+}
+@media (max-width: 768px){
+    footer .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    body.disabled{
+        overflow: hidden;
+    }
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .navbar .menu-list{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: white;
+        transition: all 0.3s ease;
+    }
+    .navbar.show .menu-list{
+        left: 0%;
+    }
+    .navbar .menu-list li{
+        margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+        font-size: 23px;
+        margin-left: -100%;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navbar.show .menu-list li a{
+        margin-left: 0px;
+    }
+    .block .title{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .advantage{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .block input,
+    .block .submit-btn,
+    .block .result{
+        width: 300px;
+    }
+}
